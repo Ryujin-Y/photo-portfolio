@@ -39,7 +39,7 @@ header h4 {
 }
 
 img.first-photo {
-    margin-top: 50vh;  /* 画面の高さの半分に設定して中央に表示 */
+    margin-top: calc(10vh - 30px);  /* より中央に表示されるように調整 */
 }
 
 /* モーダル全体 */
@@ -53,7 +53,6 @@ img.first-photo {
     height: 100vh;
     overflow: auto;
     background-color: rgba(0,0,0,0.8); /* 背景は半透明黒 */
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -122,11 +121,11 @@ footer a:hover {
 
     .gallery img {
         max-width: 100%;
-        margin: 0 auto 50vh auto;  /* スマホ表示時は余白を半分に */
+        margin: 0 auto 100vh auto;  /* スマホ表示時も余白を画面の高さ分に設定 */
     }
 
     img.first-photo {
-        margin-top: 25vh;  /* スマホ表示時は最初の写真の上部余白も半分に */
+        margin-top: calc(25vh - 30px);  /* より中央に表示されるように調整 */
     }
 
     .modal-content {
