@@ -9,7 +9,7 @@ const galleryImages = document.querySelectorAll(".gallery img");
 
 galleryImages.forEach(img => {
     img.addEventListener("click", () => {
-        modal.style.display = "block"; // モーダル表示
+        modal.style.display = "flex"; // モーダル表示（blockからflexに変更）
         modalImg.src = img.src;         // クリックした画像のsrcをセット
         modalImg.alt = img.alt;         // alt属性もセット（アクセシビリティ向上）
         modalCaption.innerHTML = img.alt; // キャプションを表示
