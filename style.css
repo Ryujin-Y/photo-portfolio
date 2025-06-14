@@ -1,21 +1,47 @@
 body {
     background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h4 {
+    margin: 0;
+    text-align: left;
+    font-size: 1.2rem;
+    padding-left: 1rem;
 }
 
 .gallery {
     text-align: center;
+    padding: 1rem;
+    margin-top: 60px;
 }
 
 .gallery img {
-    width: auto;
-    max-width: 50%; 
-    max-height: 90vh;
-    display: block; 
-    margin: 0 auto 300px auto; 
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 85vh;  /* 画面の高さの85%を最大高さに設定 */
+    display: block;
+    margin: 0 auto 100vh auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    object-fit: contain;  /* 画像のアスペクト比を保持しながら収める */
 }
 
-img.first-photo{
-    margin-top: 150px;
+img.first-photo {
+    margin-top: 20vh;  /* 画面の高さの20%に設定してさらに上部に寄せる */
 }
 
 /* モーダル全体 */
@@ -36,8 +62,8 @@ img.first-photo{
 .modal-content {
     display: block;
     margin: auto;
-    max-width: 80%;
-    max-height: 80vh; /* 画面高さの80%以内にする */
+    max-width: 90%;
+    max-height: 90vh;
     box-shadow: 0 0 10px #fff;
     border-radius: 8px;
 }
@@ -67,4 +93,47 @@ img.first-photo{
     color: #fff;
     font-size: 1.2em;
     padding: 10px 0;
+}
+
+footer {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+footer a {
+    color: #333;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #666;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 768px) {
+    header h4 {
+        font-size: 1rem;
+    }
+
+    .gallery img {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    .modal-caption {
+        font-size: 1em;
+        width: 90%;
+    }
 }
